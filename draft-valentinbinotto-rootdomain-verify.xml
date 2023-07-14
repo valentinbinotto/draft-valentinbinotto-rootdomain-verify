@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
+<?rfc strict="yes" ?>
+<?rfc toc="no"?>
+<!-- valentin.binotto -->
+<!-- <?rfc tocdepth="4"?> -->
+
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes" ?>
+<?rfc compact="yes" ?>
+<?rfc subcompact="no" ?>
+<rfc submissionType="IETF" category="info" docName="draft-valentinbinotto-rootdomain-verify" ipr="trust200902">
+
+  <front>
+    <title abbrev="Verifying domain names">A method to declare domain names that are not a subdomain of the primary domain as trustworthy</title>
+    <author fullname="Valentin Binotto" initials="V." surname="Binotto">
+      <organization>V434 Project</organization>
+      <address>
+        <email>valentin@v434project.com</email>
+      </address>
+    </author>
+    <date year="2023" month="July" day="15"/>
+    <area>Domain Name System</area>
+    <workgroup></workgroup>
+    <keyword>Internet Draft</keyword>
+    <abstract>
+	    <t>This document describes a method by which the owners/administrators of a specific domain name can declare other domain names, which are not subdomains of the primary domain but are used by the owners/administrators of the primary domain, as trusted by using TXT records in the DNS zone of the primary domain.</t>
+    </abstract>
+  </front>
+
+
+  <middle>
+    <section anchor="introduction" title="Introduction">
+	    <t>Internet infrastructure providers sometimes use different domain names that are not hierarchically related. This can make it unclear whether a domain name can be trusted because the infrastructure provider simply uses a second domain name for a part of his infrastructure or network, or if it is a maliciously registered domain name that aims to pretend legitimacy. When using subdomains, this problem does not arise because with a trusted parent domain name, it can be assumed that the corresponding subdomain is also legitimate and trustworthy.</t>
+    </section>
+    
+    
+    <section anchor="conventions-and-definitions" title="Conventions and Definitions">
+      <t>The key words "<bcp14>MUST</bcp14>", "<bcp14>MUST NOT</bcp14>", "<bcp14>REQUIRED</bcp14>", "<bcp14>SHALL</bcp14>", "<bcp14>SHALL
+NOT</bcp14>", "<bcp14>SHOULD</bcp14>", "<bcp14>SHOULD NOT</bcp14>", "<bcp14>RECOMMENDED</bcp14>", "<bcp14>NOT RECOMMENDED</bcp14>",
+"<bcp14>MAY</bcp14>", and "<bcp14>OPTIONAL</bcp14>" in this document are to be interpreted as
+described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they
+appear in all capitals, as shown here.</t>
+    </section>
+     
+     
+    <section anchor="the-specification" title="The Specification">
+	    <t>A subset of the BGP communities of ASN 65535, the last ASN of the 16 bit range, are reserved for use by Well-known communities as described in <xref target="RFC1997" /> and <xref target="IANA.WK" />.  Although this is not currently true of ASN 4294967295, if there is a future need for another Special Use ASN that is not designed to be globally routable, or the associated BGP communities of such an ASN, ASN 4294967295 could be a valid candidate for such purpose.  This document does not prescribe any such Special Use to this ASN at the time of publication.</t> 
+    <sourcecode type="txt" markers="false"><![CDATA[
+example.com:example.org:example.net
+]]></sourcecode>
+</section>
+   
+
+   <section anchor="security-considerations" title="Security Considerations">
+      <t>According to the author, no security considerations apply to this document.</t>
+    </section>
+    
+    <section anchor="iana-considerations" title="IANA Considerations">
+      <t>This document has no IANA actions.</t>
+    </section>
+    
+    
+   </middle>
+
+   <back>
+   	<references title="Normative References">
+	   	<?rfc include="reference.RFC.2119.xml"?>
+	   	<?rfc include="reference.RFC.4271.xml"?>
+	   	<?rfc include="reference.RFC.6793.xml"?>
+		<reference anchor="IANA.AS" target="http://www.iana.org/assignments/as-numbers/">
+		    <front>
+			    <title>Autonomous System (AS) Numbers</title>
+			    <author surname="IANA" fullname="IANA"><organization/></author>
+			    <date month="April" year="2014"/>
+		    </front>
+	    	</reference>
+	    	<?rfc include="reference.I-D.housley-number-registries.xml"?>
+    	</references>
+    	<references title="Informative References">
+		<reference anchor="IANA.WK" target="http://www.iana.org/assignments/bgp-well-known-communities/">
+		    <front>
+			    <title>Border Gateway Protocol (BGP) Well-known Communities</title>
+			    <author surname="IANA" fullname="IANA"><organization/></author>
+			    <date month="April" year="2014"/>
+		    </front>
+	    	</reference>
+	   	<?rfc include="reference.RFC.1997.xml"?>
+	   	<?rfc include="reference.RFC.6996.xml"?>
+    	</references>
+    	<section anchor="Acknowledgments" title="Acknowledgments">
+	   <t></t>
+   	</section>
+  </back>
+
+</rfc>
+
