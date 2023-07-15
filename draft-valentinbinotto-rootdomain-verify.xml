@@ -46,10 +46,17 @@ appear in all capitals, as shown here.</t>
      
      
     <section anchor="the-specification" title="The Specification">
-	    <t>A subset of the BGP communities of ASN 65535, the last ASN of the 16 bit range, are reserved for use by Well-known communities as described in <xref target="RFC1997" /> and <xref target="IANA.WK" />.  Although this is not currently true of ASN 4294967295, if there is a future need for another Special Use ASN that is not designed to be globally routable, or the associated BGP communities of such an ASN, ASN 4294967295 could be a valid candidate for such purpose.  This document does not prescribe any such Special Use to this ASN at the time of publication.</t> 
+	    <t>A TXT record (<xref target="RFC1035" />) is created in the authoritative DNS zone under the subdomain "vroot" below the primary domain of an infrastructure provider. In this entry, in addition to the corresponding entries in the WHOIS database, the first name and last name of the root domain owner can be recorded in such a TXT entry.
+Both the first name and last name are written in lowercase and separated by a period.
     <sourcecode type="txt" markers="false"><![CDATA[
+        vroot.valentin-43-44.org    IN   TXT   "valentin.binotto"
+]]></sourcecode>
+In another TXT record, under the subdomain "vroot", it can be defined which other domain names are also used by the infrastructure provider. This enumeration does not include subdomains of the primary domain. The listed domain names are defined as close to the root as possible, which means that, for example, no individual subdomains of example.net should be listed if the security and trustworthiness of example.net itself and all its subdomains below can be guaranteed.</t> 
+
+	    <sourcecode type="txt" markers="false"><![CDATA[
 example.com:example.org:example.net
 ]]></sourcecode>
+	    
 </section>
    
 
@@ -67,28 +74,12 @@ example.com:example.org:example.net
    <back>
    	<references title="Normative References">
 	   	<?rfc include="reference.RFC.2119.xml"?>
-	   	<?rfc include="reference.RFC.4271.xml"?>
-	   	<?rfc include="reference.RFC.6793.xml"?>
-		<reference anchor="IANA.AS" target="http://www.iana.org/assignments/as-numbers/">
-		    <front>
-			    <title>Autonomous System (AS) Numbers</title>
-			    <author surname="IANA" fullname="IANA"><organization/></author>
-			    <date month="April" year="2014"/>
-		    </front>
-	    	</reference>
-	    	<?rfc include="reference.I-D.housley-number-registries.xml"?>
+	   	<?rfc include="reference.RFC.8174.xml"?>
+	   	<?rfc include="reference.RFC.1464.xml"?>
+	        <?rfc include="reference.RFC.1035.xml"?>
+
     	</references>
-    	<references title="Informative References">
-		<reference anchor="IANA.WK" target="http://www.iana.org/assignments/bgp-well-known-communities/">
-		    <front>
-			    <title>Border Gateway Protocol (BGP) Well-known Communities</title>
-			    <author surname="IANA" fullname="IANA"><organization/></author>
-			    <date month="April" year="2014"/>
-		    </front>
-	    	</reference>
-	   	<?rfc include="reference.RFC.1997.xml"?>
-	   	<?rfc include="reference.RFC.6996.xml"?>
-    	</references>
+    	
     	<section anchor="Acknowledgments" title="Acknowledgments">
 	   <t></t>
    	</section>
