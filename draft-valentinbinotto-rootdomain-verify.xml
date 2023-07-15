@@ -73,11 +73,63 @@ example.com:example.org:example.net
 
    <back>
    	<references title="Normative References">
-	   	<?rfc include="reference.RFC.2119.xml"?>
-	   	<?rfc include="reference.RFC.8174.xml"?>
-	   	<?rfc include="reference.RFC.1464.xml"?>
-	        <?rfc include="reference.RFC.1035.xml"?>
 
+	<reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119">
+        <front>
+          <title>Key words for use in RFCs to Indicate Requirement Levels</title>
+          <author fullname="S. Bradner" initials="S." surname="Bradner">
+            <organization/>
+          </author>
+          <date month="March" year="1997"/>
+          <abstract>
+            <t>In many standards track documents several words are used to signify the requirements in the specification.  These words are often capitalized. This document defines these words as they should be interpreted in IETF documents.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</t>
+          </abstract>
+        </front>
+        <seriesInfo name="BCP" value="14"/>
+        <seriesInfo name="RFC" value="2119"/>
+        <seriesInfo name="DOI" value="10.17487/RFC2119"/>
+      </reference>
+	<reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174">
+        <front>
+          <title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title>
+          <author fullname="B. Leiba" initials="B." surname="Leiba">
+            <organization/>
+          </author>
+          <date month="May" year="2017"/>
+          <abstract>
+            <t>RFC 2119 specifies common key words that may be used in protocol  specifications.  This document aims to reduce the ambiguity by clarifying that only UPPERCASE usage of the key words have the  defined special meanings.</t>
+          </abstract>
+        </front>
+        <seriesInfo name="BCP" value="14"/>
+        <seriesInfo name="RFC" value="8174"/>
+        <seriesInfo name="DOI" value="10.17487/RFC8174"/>
+      </reference>
+		
+	<reference anchor="RFC1464" target="https://www.rfc-editor.org/info/rfc1464">
+        <front>
+          <title>Using the Domain Name System To Store Arbitrary String Attributes</title>
+          <author fullname="Rich Rosenbaum" initials="R." surname="Rosenbaum">
+            <organization/>
+          </author>
+          <date month="May" year="1993"/>
+          <abstract>
+            <t>This paper describes a simple means to associate arbitrary string information (ASCII text) with attributes that have not been defined by the DNS. This memo defines an Experimental Protocol for the Internet community.</t>
+          </abstract>
+        </front>
+      </reference>
+		<reference anchor="RFC1035" target="https://www.rfc-editor.org/info/rfc1035">
+        <front>
+          <title>Domain names - implementation and specification</title>
+          <author fullname="P. Mockapetris" initials="P." surname="Mockapetris">
+            <organization/>
+          </author>
+          <date month="November" year="1987"/>
+          <abstract>
+            <t>This RFC is the revised specification of the protocol and format used in the implementation of the Domain Name System. It obsoletes RFC-883. This memo documents the details of the domain name client - server communication.</t>
+          </abstract>
+        </front>
+      </reference>
+	
     	</references>
     	
     	<section anchor="Acknowledgments" title="Acknowledgments">
