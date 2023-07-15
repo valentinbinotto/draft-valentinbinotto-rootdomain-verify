@@ -46,7 +46,7 @@ appear in all capitals, as shown here.</t>
      
      
     <section anchor="the-specification" title="The Specification">
-	    <t>A TXT record (<xref target="RFC1035" />) MUST be created in the authoritative DNS zone under the subdomain "vroot" below the primary domain of an infrastructure provider. In this entry, in addition to the corresponding entries in the WHOIS database, the first name and last name of the root domain owner MUST be recorded in such a TXT record.
+	    <t>A TXT record (<xref target="RFC1035" />) MUST be created in the authoritative DNS zone under the subdomain "vroot" below the primary domain of an infrastructure provider. In this entry, in addition to the corresponding entries in the WHOIS database (<xref target="RFC1834" />), the first name and last name of the root domain owner MUST be recorded in such a TXT record.
 Both the first name and last name are written in lowercase and separated by a period.
     <sourcecode type="txt" markers="false"><![CDATA[
 vroot.valentin-43-44.org.    IN   TXT   "valentin.binotto"
