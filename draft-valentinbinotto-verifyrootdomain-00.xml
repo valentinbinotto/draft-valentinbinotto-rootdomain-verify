@@ -6,15 +6,16 @@
 
   <front>
     <title abbrev="Verifying domain names">A method to declare domain names that are not a subdomain of the primary domain as trustworthy</title>
+    <seriesInfo name="Internet-Draft" value="draft-valentinbinotto-verifyrootdomain-00"/>
     <author fullname="Valentin Binotto" initials="V." surname="Binotto">
-      <organization>V434 Project</organization>
-      <address>
+    <organization>V434 Project</organization>
+    <address>
         <email>valentin@v434project.com</email>
-      </address>
+    </address>
     </author>
     <date year="2023" month="July" day="22"/>
     <area>Domain Name System</area>
-    <workgroup></workgroup>
+    <workgroup>Internet Engineering Task Force</workgroup>
     <keyword>Internet Draft</keyword>
     <abstract>
 	    <t>This document describes a method by which the owners/administrators of a specific domain name can declare other domain names, which are not subdomains of the primary domain but are used by the owners/administrators of the primary domain, as trusted by using TXT records in the DNS zone of the primary domain.</t>
@@ -23,21 +24,23 @@
 
 
   <middle>
-    <section anchor="introduction" title="Introduction">
+    <section>
+      <name>Introduction</name>
 	    <t>Internet infrastructure providers sometimes use different domain names that are not hierarchically related. This can make it unclear whether a domain name can be trusted because the infrastructure provider simply uses a second domain name for a part of his infrastructure or network, or if it is a maliciously registered domain name that aims to pretend legitimacy. When using subdomains, this problem does not arise because with a trusted parent domain name, it can be assumed that the corresponding subdomain is also legitimate and trustworthy.</t>
-    </section>
-    
-    
-    <section anchor="conventions-and-definitions" title="Conventions and Definitions">
+    <section>
+        <name>Requirements Language</name>
       <t>The key words "<bcp14>MUST</bcp14>", "<bcp14>MUST NOT</bcp14>", "<bcp14>REQUIRED</bcp14>", "<bcp14>SHALL</bcp14>", "<bcp14>SHALL
 NOT</bcp14>", "<bcp14>SHOULD</bcp14>", "<bcp14>SHOULD NOT</bcp14>", "<bcp14>RECOMMENDED</bcp14>", "<bcp14>NOT RECOMMENDED</bcp14>",
 "<bcp14>MAY</bcp14>", and "<bcp14>OPTIONAL</bcp14>" in this document are to be interpreted as
 described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they
 appear in all capitals, as shown here.</t>
     </section>
+</section>
+
      
      
-    <section anchor="the-specification" title="The Specification">
+    <section>
+     <name>The Specification</name>
 	    <t>A TXT record (<xref target="RFC1035" />) MUST be created in the authoritative DNS zone under the subdomain "vroot" below the primary domain of an infrastructure provider. In this entry, in addition to the corresponding entries in the WHOIS database (<xref target="RFC1834" />), the first name and last name of the root domain owner MUST be recorded in such a TXT record.
 Both the first name and last name are written in lowercase and separated by a period.
     <sourcecode type="txt" markers="false"><![CDATA[
@@ -52,11 +55,15 @@ vroot.example.net.    IN   TXT   "example.com:example.org"
 </section>
    
 
-   <section anchor="security-considerations" title="Security Considerations">
+   <section>
+    <name>Security Considerations</name>
+   
       <t>According to the author, no security considerations apply to this document.</t>
     </section>
     
-    <section anchor="iana-considerations" title="IANA Considerations">
+    <section>
+	<name>IANA Considerations</name>
+
       <t>This document has no IANA actions.</t>
     </section>
     
@@ -82,9 +89,7 @@ vroot.example.net.    IN   TXT   "example.com:example.org"
 
         </references>
         </references>
-    	<section anchor="Acknowledgments" title="Acknowledgments">
-	   <t></t>
-   	</section>
+   
    
   </back>
 
