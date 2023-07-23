@@ -10,7 +10,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc submissionType="IETF" category="info" docName="draft-valentinbinotto-rootdomain-verify" ipr="trust200902">
+<rfc submissionType="IETF" category="info" docName="draft-valentinbinotto-rootdomain-verify-01" ipr="trust200902">
 
   <front>
     <title abbrev="Verifying domain names">A method to declare domain names that are not a subdomain of the primary domain as trustworthy</title>
