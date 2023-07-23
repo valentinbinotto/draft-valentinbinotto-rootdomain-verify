@@ -62,7 +62,10 @@ vroot.example.net.    IN   TXT   "example.com:example.org"
    </middle>
 
    <back>
-   	<references title="Normative References">
+   	<references>
+        <name>References</name>
+        <references>
+        <name>Normative References</name>
 
 	<xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.1035.xml"/>
 	<xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml"/>
@@ -71,10 +74,14 @@ vroot.example.net.    IN   TXT   "example.com:example.org"
 
 	
 	</references>
-    	
+        <references>
+        <name>Informative References</name>
+        </references>
+        </references>
     	<section anchor="Acknowledgments" title="Acknowledgments">
 	   <t></t>
    	</section>
+   
   </back>
 
 </rfc>
