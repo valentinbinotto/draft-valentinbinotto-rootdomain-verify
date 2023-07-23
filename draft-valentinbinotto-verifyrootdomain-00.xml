@@ -12,7 +12,7 @@
         <email>valentin@v434project.com</email>
       </address>
     </author>
-    <date year="2023" month="July" day="15"/>
+    <date year="2023" month="July" day="22"/>
     <area>Domain Name System</area>
     <workgroup></workgroup>
     <keyword>Internet Draft</keyword>
@@ -72,13 +72,14 @@ vroot.example.net.    IN   TXT   "example.com:example.org"
 	<xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.1035.xml"/>
 	<xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml"/>
-        <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.1464.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.1834.xml"/>
 
 	
 	</references>
         <references>
         <name>Informative References</name>
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.1464.xml"/>
+
         </references>
         </references>
     	<section anchor="Acknowledgments" title="Acknowledgments">
