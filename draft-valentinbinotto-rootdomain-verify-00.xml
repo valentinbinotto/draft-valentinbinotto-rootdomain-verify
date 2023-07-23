@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-model href="rfc7991bis.rnc"?>
 <!-- valentin.binotto -->
 
-<rfc submissionType="IETF" category="info" docName="draft-valentinbinotto-rootdomain-verify-00" ipr="trust200902">
+<rfc submissionType="IETF" category="info" docName="draft-valentinbinotto-rootdomain-verify-00" ipr="trust200902" version="0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <front>
     <title abbrev="Verifying domain names">A method to declare domain names that are not a subdomain of the primary domain as trustworthy</title>
